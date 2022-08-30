@@ -1,0 +1,86 @@
+/* Global Styles */
+
+*, 
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+h4{
+    font-size: 0.875rem;
+}
+p{
+    margin-bottom: 1.25rem;
+}
+
+.nav-container{
+    background: #fff;
+    display: grid;
+    align-items: center;
+    height: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center{
+    width: 90vw;
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-center h4 {
+    margin-bottom: 0;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.link{
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+.link:hover{
+    color: #fff;
+    background: black;
+}
+
+
