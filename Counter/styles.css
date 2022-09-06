@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.container-value{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.btn{
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    background: transparent;
+    color: #222;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s linear;
+}
+
+.btn-decrease:hover{
+    background: red;
+    color: #fff;
+}
+
+.btn-increase:hover{
+    background: green;
+    color: #fff;
+}
