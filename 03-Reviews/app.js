@@ -1,4 +1,4 @@
-// Local reviews data
+// local reviews data
 const reviews = [
     {
       id: 1,
@@ -53,5 +53,5 @@ let currentItem = 0;
 
 // Loading initial item
 window.addEventListener("DOMContentLoaded", function(){
-    console.log("Jheeze")
+    console.log("hi")
 })
