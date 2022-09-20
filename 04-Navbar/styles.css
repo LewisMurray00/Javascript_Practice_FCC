@@ -18,3 +18,33 @@
     transition: all 0.3s linear;
     cursor: pointer;
 }
+
+.nav-toggle:hover{
+    color: hsl(205,86%,17%);
+    transform: rotate(90deg);
+}
+
+.nav-logo{
+    height: 80px;
+}
+
+.links{
+    list-style-type: none;
+}
+
+.links a {
+    color: grey;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
+.links a:hover{
+    background: hsl(205, 86%, 81%);;
+    color: black;
+    padding: 1.5rem;
+}
