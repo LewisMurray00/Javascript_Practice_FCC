@@ -1,0 +1,20 @@
+.nav-container{
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+    color: hsl(205,78%,60%);
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
