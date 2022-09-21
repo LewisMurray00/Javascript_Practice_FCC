@@ -48,3 +48,70 @@
     transform: rotate(360deg);
 }
 
+.sidebar-logo{
+    justify-content: center;
+    height: 80px;
+}
+
+.links{
+    list-style-type: none;
+}
+
+.links a {
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    color: grey;
+    transition: all 0.3s linear;
+}
+
+.links a:hover{
+    background: lightblue;
+    color: black;
+    padding-left: 1.75rem;
+}
+
+.social-icons{
+    list-style-type: none;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: lightblue;
+    transition: all 0.3s linear;
+}
+
+.social-icons a:hover{
+    color: rgb(197, 234, 247);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: 0 5px 15px darkred;
+    transition: all 0.3s linear;
+    transform: translate(-100%);
+}
+
+
+.show-sidebar{
+    transform: translate(0);
+}
+
+@media screen and (min-width: 676px){
+    .sidebar{
+        width: 400px;
+    }
+}
