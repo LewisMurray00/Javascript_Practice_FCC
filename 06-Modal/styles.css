@@ -1,22 +1,3 @@
-/* Hero */
-
-.hero{
-    min-height: 100vh;
-    background: url("./Project-stock-image.jpg") center/cover no-repeat;
-    display: grid;
-    place-items: center;
-}
-
-.banner{
-    background: white;
-    padding: 4rem 0;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90vw;
-    max-width: 620px;
-}
-
 .btn{
     text-transform: uppercase;
     background: transparent;
@@ -37,4 +18,83 @@
     background: black;
 }
 
+/* Hero */
+
+.hero{
+    min-height: 100vh;
+    background: url("./Project-stock-image.jpg") center/cover no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.banner{
+    background: white;
+    padding: 4rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90vw;
+    max-width: 620px;
+}
+
+.btn-modal{
+    margin-top: 2rem;
+    background: lightseagreen;
+    border-color: lightseagreen;
+    color: white;
+}
+
+.btn-modal:hover{
+    background: transparent;
+    color: lightseagreen;
+}
+
 /* Modal */
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73,166,233,0.5);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    z-index: -10;
+}
+
+.modal-container{
+    background: white;
+    border-radius: 0.5rem;
+    width: 90vw;
+    height: 30vh;
+    max-width: 620px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.btn-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    color: darkred;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.btn-close:hover{
+    color: red;
+    transform: scale(1.3);
+}
+
+/* OPEN/CLose Modal */
+.open-modal{
+    visibility: visible;
+    z-index: 10;
+}
