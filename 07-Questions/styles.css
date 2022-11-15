@@ -52,3 +52,13 @@
 .question-btn:hover{
     transform: rotate(90deg);
 }
+
+/* Styling for the 'question-text' tag */
+.question-text{
+    padding: 1rem 0 1.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.question-text p{
+    margin-bottom: 0;
+}
