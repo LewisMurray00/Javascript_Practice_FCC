@@ -24,6 +24,7 @@
     margin-bottom: 2rem;
 }
 
+/*Styling for the 'question-title' tag */
 .question-title{
     display: flex;
     justify-content: space-between;
@@ -36,4 +37,18 @@
     margin-bottom: 0;
     letter-spacing: 0.25rem;
     color: hsl(209, 61%, 16%);
+}
+
+/* Styling for the 'question-btn' tag */
+.question-btn{
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: gold;
+    transition: all 0.3s linear;
+}
+
+.question-btn:hover{
+    transform: rotate(90deg);
 }
