@@ -65,7 +65,7 @@
 
 
 /* Hide text (modal) */
-/* .question-text{
+.question-text{
     display: none;
 }
 
@@ -83,4 +83,4 @@
 
 .show-text .plus-icon{
     display: none;
-} */
+}
