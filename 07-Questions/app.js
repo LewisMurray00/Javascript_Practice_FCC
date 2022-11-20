@@ -1,3 +1,5 @@
+//Traversing the DOM method 
+
 // Select the buttons and loop through them adding an event listener
 
 const btns = document.querySelectorAll('.question-btn');
@@ -8,3 +10,4 @@ btns.forEach(function(btn){
         question.classList.toggle('show-text');
     })
 })
+
