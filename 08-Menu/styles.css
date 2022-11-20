@@ -17,6 +17,30 @@
 }
 
 /* Filter button styling */
+.btn-container{
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn{
+    background: transparent;
+    border-color: gold;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.filter-btn:hover{
+    background: gold;
+    color: white;
+}
 
 /* Menu item styling */
 .section-center{
