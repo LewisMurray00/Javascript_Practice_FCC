@@ -33,3 +33,11 @@
     gap: 1rem 2rem;
     max-width: 25rem;
 }
+
+.photo{
+    object-fit: cover;
+    height: 200px;
+    border: 0.25rem solid gold;
+    border-radius: 0.5rem;
+}
+
