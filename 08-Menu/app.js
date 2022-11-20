@@ -77,8 +77,13 @@ const menu = [
 const sectionCenter = document.querySelector('.section-center');
 
 window.addEventListener('DOMContentLoaded', function(){
-    // Map over the items in the array 
-    let displayMenu = menu.map(function(item){
+   displayMenuItems(menu)
+});
+
+// Sepertated the code to its own function to clean it up
+function displayMenuItems(menuItems){
+     // Map over the items in the array 
+     let displayMenu = menuItems.map(function(item){
         
         // Returning the mapped elements in the array
         return `<article class="menu-item">
@@ -98,4 +103,4 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // join the information to the html
     sectionCenter.innerHTML = displayMenu
-})
+}
