@@ -73,4 +73,26 @@ const menu = [
     },
   ];
 
-  
+// Targeting the parent element of the menu item section
+const sectionCenter = document.querySelector('.section-center');
+
+window.addEventListener('DOMContentLoaded', function(){
+    // Map over the items in the array 
+    let displayMenu = menu.map(function(item){
+        
+        // Returning the mapped elements in the array
+        return `<article class="menu-item">
+        <img src= ${item.img} class="photo" alt= ${item.title}>
+        <div class="item-info">
+            <header>
+                <h4>${item.title}</h4>
+                <h4 class="price">£${item.price}</h4>
+            </header>
+            <p class="item-text">
+                ${item.description}
+            </p>
+        </div>
+    </article>`
+    })  
+    console.log(displayMenu)
+})
