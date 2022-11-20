@@ -89,10 +89,13 @@ window.addEventListener('DOMContentLoaded', function(){
                 <h4 class="price">£${item.price}</h4>
             </header>
             <p class="item-text">
-                ${item.description}
+                ${item.desc}
             </p>
         </div>
     </article>`
-    })  
-    console.log(displayMenu)
+    });
+    displayMenu = displayMenu.join('');   
+
+    // join the information to the html
+    sectionCenter.innerHTML = displayMenu
 })
