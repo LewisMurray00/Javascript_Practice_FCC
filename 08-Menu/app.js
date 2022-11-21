@@ -76,9 +76,20 @@ const menu = [
 // Targeting the parent element of the menu item section
 const sectionCenter = document.querySelector('.section-center');
 
+// Targeting the filter-btn class in html and assigning it to a variable in JS
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+// Load items
 window.addEventListener('DOMContentLoaded', function(){
    displayMenuItems(menu)
 });
+
+// Filter items
+filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        console.log(e.currentTarget.dataset.id)  
+    })
+})
 
 // Sepertated the code to its own function to clean it up
 function displayMenuItems(menuItems){
