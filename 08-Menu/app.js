@@ -73,71 +73,74 @@ const menu = [
     },
   ];
 
-// Targeting the parent element of the menu item section
-const sectionCenter = document.querySelector('.section-center');
-
-// Targeting the filter-btn class in html and assigning it to a variable in JS
-const filterBtns = document.querySelectorAll('.filter-btn');
-
-// Load items
-window.addEventListener('DOMContentLoaded', function(){
-   displayMenuItems(menu);
-   displayFilterBtn(menu)
+// get parent element
+const sectionCenter = document.querySelector(".section-center");
+const btnContainer = document.querySelector(".btn-container");
+// display all items when page loads
+window.addEventListener("DOMContentLoaded", function () {
+  diplayMenuItems(menu);
+  displayMenuButtons();
 });
 
-// Filter items
-filterBtns.forEach(function(btn){
-    btn.addEventListener('click', function(e){
-        const category = e.currentTarget.dataset.id;
-        
-        //create a new variable for the filtered array
-        const menuCategory = menu.filter(function(menuItem){
-            if(menuItem.category === category){
-                return menuItem;
-            }
-        })
-        if(category === 'all'){
-            displayMenuItems(menu);
-        } else{
-            displayMenuItems(menuCategory);
-        }    
-    })
-})
+function diplayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    // console.log(item);
 
-// Sepertated the code to its own function to clean it up
-function displayMenuItems(menuItems){
-     // Map over the items in the array 
-     let displayMenu = menuItems.map(function(item){
-        
-        // Returning the mapped elements in the array
-        return `<article class="menu-item">
-        <img src= ${item.img} class="photo" alt= ${item.title}>
-        <div class="item-info">
+    return `<article class="menu-item">
+          <img src=${item.img} alt=${item.title} class="photo" />
+          <div class="item-info">
             <header>
-                <h4>${item.title}</h4>
-                <h4 class="price">£${item.price}</h4>
+              <h4>${item.title}</h4>
+              <h4 class="price">$${item.price}</h4>
             </header>
             <p class="item-text">
-                ${item.desc}
+              ${item.desc}
             </p>
-        </div>
-    </article>`
-    });
-    displayMenu = displayMenu.join('');   
+          </div>
+        </article>`;
+  });
+  displayMenu = displayMenu.join("");
+  // console.log(displayMenu);
 
-    // join the information to the html
-    sectionCenter.innerHTML = displayMenu
+  sectionCenter.innerHTML = displayMenu;
 }
+function displayMenuButtons() {
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  const categoryBtns = categories
+    .map(function (category) {
+      return `<button type="button" class="filter-btn" data-id=${category}>
+          ${category}
+        </button>`;
+    })
+    .join("");
 
-// created a function to invoke the filter buttons if the information was changed for example
-function displayFilterBtn(filterBtns){
-    //Getting unique categories 
-    const categories = filterBtns.reduce(function(values,item){
-        // The if statement shows that if it doesnt include item category then the values will be added to values, however if it does then the array will return
-        if(!values.includes(item.category)){
-            values.push(item.category);
-        }  
-    return values
-    }, ['all'])
-    console.log(categories)
+  btnContainer.innerHTML = categoryBtns;
+  const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+  console.log(filterBtns);
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      // console.log(e.currentTarget.dataset);
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter(function (menuItem) {
+        // console.log(menuItem.category);
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
+      if (category === "all") {
+        diplayMenuItems(menu);
+      } else {
+        diplayMenuItems(menuCategory);
+      }
+    });
+  });
 }
