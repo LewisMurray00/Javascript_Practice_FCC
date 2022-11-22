@@ -81,7 +81,8 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 
 // Load items
 window.addEventListener('DOMContentLoaded', function(){
-   displayMenuItems(menu)
+   displayMenuItems(menu);
+   displayFilterBtn(menu)
 });
 
 // Filter items
@@ -126,4 +127,17 @@ function displayMenuItems(menuItems){
 
     // join the information to the html
     sectionCenter.innerHTML = displayMenu
+}
+
+// created a function to invoke the filter buttons if the information was changed for example
+function displayFilterBtn(filterBtns){
+    //Getting unique categories 
+    const categories = filterBtns.reduce(function(values,item){
+        // The if statement shows that if it doesnt include item category then the values will be added to values, however if it does then the array will return
+        if(!values.includes(item.category)){
+            values.push(item.category);
+        }  
+    return values
+    }, ['all'])
+    console.log(categories)
 }
