@@ -56,6 +56,6 @@ h1{
     transition: all 0.3s linear;
 }
 
-/* .slide .switch{
+.slide .switch{
     left: 50%;
-} */
+}
