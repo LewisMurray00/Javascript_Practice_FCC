@@ -32,6 +32,26 @@ header::after{
     z-index: -1;
 }
 
+/* Preloader styling */
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    display: grid;
+    justify-content: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+
+.hide-preloader{
+    z-index: -999;
+    visibility: hidden;
+}
+
 /* Switch/Button styling */
 .switch-btn{
     position: absolute;

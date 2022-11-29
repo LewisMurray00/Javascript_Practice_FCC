@@ -11,4 +11,12 @@ btn.addEventListener('click', function(){
         btn.classList.remove("slide");
         video.play();
     }
+});
+
+//Preloader code
+const preloader = document.querySelector(".preloader");
+
+//Add a function that hides the preloader gif once the video loads
+window.addEventListener('load', function(){
+    preloader.classList.add('hide-preloader')
 })
