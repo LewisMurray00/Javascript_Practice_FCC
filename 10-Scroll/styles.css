@@ -4,6 +4,24 @@ nav{
     padding: 1rem 1.5rem;
 }
 
+/* fixed Nav */
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.fixed-nav .links a {
+    color: grey;
+}
+
+.fixed-nav .links a:hover{
+    color: hsla(182, 63%, 54%);
+}
+
 .nav-header{
     display: flex;
     align-items: center;
@@ -20,7 +38,7 @@ nav{
 }
 
 .nav-toggle:hover{
-    color: black;
+    color: hsla(182, 63%, 54%);
 }
 
 .logo{
@@ -50,7 +68,7 @@ nav{
 }
 
 .links a:hover{
-    color: black;
+    color: grey;
 }
 
 /* Media queries for the navbar (responsive) */
@@ -171,7 +189,7 @@ header{
     z-index: -100;
 }
 
-.scroll-link{
+.show-link{
     visibility: visible;
     z-index: 100;
 }
