@@ -73,4 +73,26 @@
     letter-spacing: 0.25rem;
 }
 
+.tab-btn:hover:not(.active){
+    background:  hsl(205, 100%, 96%);
+    color: #49a6e9;
+}
 
+.about-content{
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 2rem 1.5rem;
+}
+
+/* Hide content */
+.content{
+    display: none;
+}
+
+.tab-btn.active{
+    background: white;
+}
+
+.content.active{
+    display: block;
+}
