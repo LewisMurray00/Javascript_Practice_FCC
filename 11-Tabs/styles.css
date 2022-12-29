@@ -25,5 +25,52 @@
     .about-img{
         margin-bottom: 0;
     }
+
+    /* About section */
+
+    .about-centre{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
 }
+
+/* About section  */
+
+.about{
+    background: white;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.btn-container{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* Tab buttons styling */
+.tab-btn:nth-child(1){
+    border-top-left-radius: 0.5rem;
+}
+
+.tab-btn:nth-child(3){
+    border-top-right-radius: 0.5rem;
+}
+
+.tab-btn{
+    padding: 1rem 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    display: block;
+    background: hsl(212, 33%, 89%);
+    cursor: pointer;
+    transition: 0.3s all linear;
+    letter-spacing: 0.25rem;
+}
+
 
