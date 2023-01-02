@@ -1,0 +1,44 @@
+/* 
+===============
+Countdown timer
+=============== 
+*/
+
+/* Section */
+main{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.section{
+    padding: 5rem 0;
+}
+
+.section-center{
+    width: 90vw;
+    margin: 5rem auto;
+    max-width: 1170px;
+}
+
+/* Image */
+.gift-img{
+    margin-bottom: 2rem;
+    display: block;
+}
+
+/* Info */
+.gift-info h3 {
+    text-transform: uppercase;
+    color: hsl(205, 72%, 37%);
+}
+
+.gift-info p {
+    color: hsl(209, 23%, 60%);
+}
+
+/* date */
+.date{
+    color:  hsl(210, 22%, 49%);
+    font-size: 0.85rem;
+}
