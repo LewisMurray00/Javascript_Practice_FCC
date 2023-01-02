@@ -42,3 +42,49 @@ main{
     color:  hsl(210, 22%, 49%);
     font-size: 0.85rem;
 }
+
+@media screen and (min-width: 992px){
+    .section-center{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        gap: 3rem;
+        width: 95vw;
+    }
+
+    .gift-img{
+        margin-bottom: 0;
+    }
+
+    .gift-info p {
+        margin: 2rem 0;
+    }
+
+    .deadline{
+        display: flex;
+    }
+
+    .deadline-format{
+        background: hsl(205, 86%, 17%);
+        color: #fff;
+        margin-right: 1rem;
+        width: 5rem;
+        height: 5rem;
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+
+    .deadline-format span {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+    }
+
+    .deadline h4:not(.expired){
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+        letter-spacing: 0.25rem;
+    }
+}
