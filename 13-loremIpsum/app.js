@@ -24,10 +24,19 @@ form.addEventListener('submit', function(e){
     //setting a variable to take in the value of the amount element
     const value = parseInt(amount.value);
 
-    //Creating an if statement if the user enters: Empty value, -1 value or > 9
-    if(isNaN(value) || value < 0 || value > 9 ){
-        result.innerHTML = `<p class="result">${text[0]}</p>`
-    }
+    //setting a random value in the array
+    const random = Math.floor(Math.random() * text.length);
 
+    //Creating an if statement if the user enters: Empty value, -1 value or > 9
+    if(isNaN(value) || value <= 0 || value > 9 ){
+        result.innerHTML = `<p class="result">${text[random]}</p>`
+    } else {
+        let tempText = text.slice(0,value);
+        tempText = tempText.map(function(item){
+            return `<p class="result">${item}</p>`
+        })
+        .join("");
+        result.innerHTML = tempText;
+    }
 
 })
