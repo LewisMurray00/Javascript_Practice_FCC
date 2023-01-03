@@ -1,0 +1,39 @@
+/*
+============
+Grocery List
+============
+*/
+
+/* Main */
+main{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* Section */
+.section-center{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 35rem;
+    margin-top: 8rem;
+    padding: 5rem 0;
+
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+    padding: 2rem;
+}
+
+.section-center:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 992px){
+    .section-center{
+        width: 95vw;
+    }
+}
+
+/* Alert */
