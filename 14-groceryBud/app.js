@@ -2,7 +2,7 @@
 const alert = document.querySelector('.alert');
 const form = document.querySelector('.grocery-form');
 const grocery = document.getElementById('grocery');
-const submit = document.querySelector('.submit-btn');
+const submitBtn = document.querySelector('.submit-btn');
 const container = document.querySelector('.grocery-container');
 const list = document.querySelector('.grocery-list');
 const clearBtn = document.querySelector('.clear-btn');
@@ -53,6 +53,12 @@ function addItem(e){
         //Show container
         container.classList.add('show-container');
 
+        // Add to local storage
+        addToLocalStorage(id,value);
+
+        //Set back to default
+        setBackToDefault();
+
     } else if (value && editFlag){
         console.log("editing")
     } else {
@@ -72,7 +78,16 @@ function displayAlert(text,action){
     },1000);
 }
 
+//Set back to default
+function setBackToDefault(){
+    grocery.value = '';
+    editFlag = false;
+    editId = '';
+    submitBtn.textContent = "submit";
+}
 
 // ******** Local Storage *********
-
+function addToLocalStorage(id,value){
+    console.log("added to local storage")
+}
 // ******** Setup Items *********
