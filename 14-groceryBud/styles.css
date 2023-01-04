@@ -116,7 +116,7 @@ main{
 .grocery-container{
     margin-top: 2rem;
     transition: all 0.3s linear;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .show-container{

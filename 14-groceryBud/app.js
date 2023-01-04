@@ -25,7 +25,34 @@ function addItem(e){
     const id = new Date().getTime().toString();
 
     if(value && !editFlag){
-        console.log("add item to the list")
+        const element = document.createElement('article');
+        // Add class 
+        element.classList.add('grocery-item');
+        // Add Id 
+        const attr = document.createAttribute('date-id');
+        attr.value = id;
+        element.setAttributeNode(attr);
+        element.innerHTML = `
+        <p class="title">${value}</p>
+        <div class="btn-container">
+            <button class="edit-btn">
+                <i class="fas fa-edit"></i>
+            </button>
+            <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
+        `;
+
+        //Append child
+        list.appendChild(element);
+
+        //Display alert
+        displayAlert('item added to the list', 'success');
+
+        //Show container
+        container.classList.add('show-container');
+
     } else if (value && editFlag){
         console.log("editing")
     } else {
@@ -37,6 +64,12 @@ function addItem(e){
 function displayAlert(text,action){
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
+
+    //Remove alert
+    setTimeout(function(){
+        alert.textContent = '';
+        alert.classList.remove(`alert-${action}`);
+    },1000);
 }
 
 
