@@ -8,8 +8,24 @@ const list = document.querySelector('.grocery-list');
 const clearBtn = document.querySelector('.clear-btn');
 
 // Edit options
+let editElement;
+let editFlag = false;
+let editId = "";
 
 // ******** Event Listeners *********
+
+//Submit Form
+form.addEventListener('submit', addItem);
+
+function addItem(e){
+    e.preventDefault();
+    const value = grocery.value;
+    const id = new Date().getTime().toString();
+
+    if(value !== '' && editFlag === flag){
+        
+    }
+}
 
 // ******** Functions *********
 
