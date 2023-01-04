@@ -17,6 +17,7 @@ let editId = "";
 //Submit Form
 form.addEventListener('submit', addItem);
 
+// ******** Functions *********
 function addItem(e){
     e.preventDefault();
     const value = grocery.value;
@@ -28,13 +29,15 @@ function addItem(e){
     } else if (value && editFlag){
         console.log("editing")
     } else {
-        alert.textContent = 'empty value';
-        alert.classList.add('alert-danger');
+        displayAlert('Please enter value', 'danger')
     }
 }
 
-// ******** Functions *********
-
+// Display alert
+function displayAlert(text,action){
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+}
 
 
 // ******** Local Storage *********
