@@ -17,6 +17,9 @@ let editId = "";
 //Submit Form
 form.addEventListener('submit', addItem);
 
+// Clear items
+clearBtn.addEventListener('click', clearItems);
+
 // ******** Functions *********
 function addItem(e){
     e.preventDefault();
@@ -76,6 +79,23 @@ function displayAlert(text,action){
         alert.textContent = '';
         alert.classList.remove(`alert-${action}`);
     },1000);
+}
+
+// Clear items
+function clearItems(){
+    const items = document.querySelectorAll('.grocery-item');
+
+    if(items.length > 0){
+        items.forEach(function(item){
+            list.removeChild(item);
+        });
+    }
+
+    container.classList.remove('show-container');
+    displayAlert('List has been emptied', 'danger');
+    setBackToDefault();
+    
+    // localStorage.removeItem('list');
 }
 
 //Set back to default
