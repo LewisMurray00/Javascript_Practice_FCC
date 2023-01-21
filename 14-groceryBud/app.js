@@ -47,6 +47,13 @@ function addItem(e){
         </div>
         `;
 
+        // add event listeners to both delete and buttons
+        const deleteBtn = element.querySelector(".delete-btn");
+        deleteBtn.addEventListener("click", deleteItem);
+
+        // const editBtn = element.querySelector(".edit-btn");
+        // editBtn.addEventListener("click", editItem);
+
         //Append child
         list.appendChild(element);
 
@@ -97,6 +104,25 @@ function clearItems(){
     
     // localStorage.removeItem('list');
 }
+
+//Delete items function 
+function deleteItem(e){
+    const element = e.currentTarget.parentElement.parentElement;
+    const id = element.dataset.id;
+
+    list.removeChild(element);
+
+    if(list.children.length === 0){
+        container.classList.remove("show-container");
+    }
+    displayAlert("Item removed", "danger");
+
+    setBackToDefault();
+
+    // //Remove from local storage
+    // removeFromLocalStorage(id);
+}
+
 
 //Set back to default
 function setBackToDefault(){
