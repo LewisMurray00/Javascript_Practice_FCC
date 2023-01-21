@@ -51,8 +51,8 @@ function addItem(e){
         const deleteBtn = element.querySelector(".delete-btn");
         deleteBtn.addEventListener("click", deleteItem);
 
-        // const editBtn = element.querySelector(".edit-btn");
-        // editBtn.addEventListener("click", editItem);
+        const editBtn = element.querySelector(".edit-btn");
+        editBtn.addEventListener("click", editItem);
 
         //Append child
         list.appendChild(element);
@@ -122,6 +122,19 @@ function deleteItem(e){
     // //Remove from local storage
     // removeFromLocalStorage(id);
 }
+
+// edit item
+function editItem(e) {
+    const element = e.currentTarget.parentElement.parentElement;
+    // set edit item
+    editElement = e.currentTarget.parentElement.previousElementSibling;
+    // set form value
+    grocery.value = editElement.innerHTML;
+    editFlag = true;
+    editId = element.dataset.id;
+    //
+    submitBtn.textContent = "edit";
+  }
 
 
 //Set back to default
