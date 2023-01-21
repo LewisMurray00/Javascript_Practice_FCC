@@ -132,7 +132,7 @@ function editItem(e) {
     grocery.value = editElement.innerHTML;
     editFlag = true;
     editId = element.dataset.id;
-    //
+
     submitBtn.textContent = "edit";
   }
 
@@ -146,7 +146,18 @@ function setBackToDefault(){
 }
 
 // ******** Local Storage *********
+
+//Add to local storage
 function addToLocalStorage(id,value){
-    console.log("added to local storage")
+    const grocery = { id, value};
+    let items = getLocalStorage();
+    items.push(grocery);
+    localStorage.setItem("list", JSON.stringify(items));
+}
+
+function getLocalStorage(){
+    return localStorage.getItem("list")
+    ? JSON.parse(localStorage.getItem("list"))
+    : [];
 }
 // ******** Setup Items *********
