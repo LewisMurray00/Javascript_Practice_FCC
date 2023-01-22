@@ -38,6 +38,20 @@ Slider
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/* 
+ .slide:nth-child(1){
+  left: 0;
+}
+.slide:nth-child(2){
+  left: 100%;
+}
+.slide:nth-child(3){
+  left: 200%;
+}
+.slide{
+  transform: translateX(-100%);
+} 
+negative value moves to left */
 
 /*
 ======
@@ -45,9 +59,14 @@ Images
 ======
 */
 
+img{
+    display: block;
+}
+
 .slide-img{
     height: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
 .person-img{
