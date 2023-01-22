@@ -32,6 +32,13 @@ Slider
     font-size: 5rem;
 }
 
+.slide:nth-child(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /*
 ======
 Images
@@ -49,4 +56,34 @@ Images
     height: 6rem;
     margin: 0 auto;
     margin-bottom: 1rem;
+}
+
+/*
+======
+Button
+======
+*/
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.prevBtn,
+.nextBtn{
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.75rem;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: hsl(210, 22%, 49%);
+    transition: all 0.3s linear;
+}
+
+.prevBtn:hover,
+.nextBtn:hover{
+    color: hsl(209, 34%, 30%);
 }
